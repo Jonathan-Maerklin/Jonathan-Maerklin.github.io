@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan's Portfolio | Projects</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       GLOBAL FIXED TOP BANNER
+       Keep this same structure on all pages.
+  ========================================================== -->
+  <header class="top-banner">
+    <div class="top-banner-inner">
+      <a href="index.html" class="home-link" aria-label="Go to home page">
+        <span class="nav-dot"></span>
+        <span class="home-text">
+          <span>Jonathan's</span>
+          <span>Portfolio</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main class="projects-page">
+
+    <section class="projects-header">
+      <h1 class="projects-title">Jonathan's Portfolio</h1>
+
+      <p class="intro-text">
+        Welcome to my portfolio! A gallery of projects I have worked on.</p>
+    </section>
+
+    <!-- =========================================================
+         PROJECT GRID
+         DESKTOP = 3 cards wide
+         TABLET  = 2 cards wide
+         MOBILE  = 1 card wide
+
+         TO ADD ANOTHER PROJECT:
+         1. Copy one full "project-card" block below
+         2. Change the href to your new project page
+         3. Change the image path
+         4. Change the alt text
+         5. Change the project title inside <h2>
+    ========================================================== -->
+    <section class="projects-grid">
+
+      <!-- Project 1 -->
+      <a href="cubesat.html" class="project-card">
+        <img src="images/cubesat/cubesat_cover.jpg" alt="CubeSat project image">
+        <div class="project-overlay">
+          <h2>CubeSat Project</h2>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <a href="airfoil.html" class="project-card">
+        <img src="images/airfoil/airfoil_cover.jpg" alt="Airfoil project image">
+        <div class="project-overlay">
+          <h2>Airfoil Project</h2>
+        </div>
+      </a>
+
+      <!-- =====================================================
+           NEW PROJECT TEMPLATE - COPY THIS BLOCK TO ADD MORE
+      ====================================================== -->
+      <!--
+      <a href="new-project.html" class="project-card">
+        <img src="images/new-project/new-project-cover.jpg" alt="New project image">
+        <div class="project-overlay">
+          <h2>New Project</h2>
+        </div>
+      </a>
+      -->
+
+    </section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <div class="footer-left">
+      <h3>Follow me on</h3>
+      <a href="https://www.linkedin.com/in/max-jonathan-maerklin" target="_blank" class="footer-link">
+        <span class="footer-dot"></span>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

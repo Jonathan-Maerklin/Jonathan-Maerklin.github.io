@@ -1,0 +1,711 @@
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+:root {
+    --accent-color: #f3bb02;
+    --accent-hover: #ffc400;
+    --text-dark: #111111;
+    --page-bg: #ffffff;
+    --footer-line: 4px;
+    --banner-height: 96px;
+    --max-width: 1500px;
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #eaeaea;
+    color: var(--text-dark);
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+/* =========================================================
+   GLOBAL FIXED TOP BANNER
+   Change 1: stays fixed at top while scrolling
+========================================================= */
+.top-banner {
+    width: 100%;
+    height: var(--banner-height);
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+}
+
+.top-banner-inner {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+/* =========================================================
+   HOME LINK + BACK LINK
+   Change 2: yellow dot aligns with first/top line of text
+========================================================= */
+.home-link,
+.back-projects-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.nav-dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    flex-shrink: 0;
+    margin-top: 14px; /* aligns dot with top line of text */
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.92;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.back-projects-text {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   MAIN LAYOUT SPACING
+   Adds room below the fixed top banner
+========================================================= */
+.hero,
+.projects-page,
+.project-page {
+    padding-top: 35px;
+}
+
+/* =========================================================
+   INDEX PAGE
+========================================================= */
+.hero {
+    max-width: 1400px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-button {
+    display: block;
+    width: 165px;
+    padding: 13px 16px;
+    background: var(--accent-color);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 999px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: background 0.2s ease, border 0.2s ease;
+}
+
+.main-button:hover {
+    background: var(--accent-hover);
+    border: 2px solid black;
+}
+
+.profile-pic {
+    width: 470px;
+    height: 470px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bio {
+    max-width: 430px;
+    min-height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 12px;
+}
+
+.bio h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+.bio p {
+    font-size: 20px;
+    line-height: 1.45;
+    margin-bottom: 16px;
+}
+
+/* =========================================================
+   SKILLS / COURSEWORK
+========================================================= */
+.skills-coursework {
+    max-width: 1100px;
+    margin-top: 0;
+    margin-bottom: 60px;
+    margin-left: 120px;
+    margin-right: 40px;
+}
+
+.skills-coursework h2 {
+    font-size: 54px;
+    margin: 0 0 24px 0;
+    text-align: left;
+    font-weight: 540;
+}
+
+.skills-block,
+.coursework-block {
+    margin-bottom: 28px;
+}
+
+.skills-coursework h3 {
+    font-size: 34px;
+    margin: 0 0 18px 0;
+    font-weight: 600;
+}
+
+.skills-coursework h4 {
+    font-size: 26px;
+    margin: 14px 0 6px 0;
+    font-weight: 600;
+}
+
+.skills-coursework ul {
+    margin: 0;
+    padding-left: 28px;
+}
+
+.skills-coursework li {
+    font-size: 17px;
+    line-height: 1.25;
+    margin-bottom: 2px;
+}
+
+.gpa-line {
+    font-size: 15px;
+    margin: 0 0 12px 0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer-banner {
+    margin-top: 20px;
+    padding: 20px 32px 40px 32px;
+    background: transparent;
+    position: relative;
+}
+
+.footer-banner::before {
+    content: "";
+    display: block;
+    width: calc(100% - 40px);
+    height: var(--footer-line);
+    background: var(--accent-color);
+    margin: 0 auto 22px auto;
+}
+
+.footer-left h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: var(--text-dark);
+}
+
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   PROJECTS PAGE
+   Change 4: desktop layout is 3 cards wide
+========================================================= */
+.projects-page {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 80px;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.projects-title {
+    font-size: 44px;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+.intro-text {
+    max-width: 800px;   /* controls line length */
+    margin: 0 auto;     /* centers it */
+    text-align: center;
+}
+
+.projects-header p {
+    font-size: 22px;
+    margin: 0;
+    line-height: 1.2;
+
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* =========================================================
+   IMPORTANT: ADDING MORE PROJECTS
+   This grid controls how many project cards appear per row.
+   Desktop: 3 columns
+   Tablet:  2 columns
+   Mobile:  1 column
+
+   If you add more project cards in projects.html, they will
+   automatically flow into this grid.
+========================================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 42px;
+    align-items: start;
+}
+
+.project-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    background: #ddd;
+    box-shadow: var(--shadow-soft);
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-overlay h2 {
+    color: white;
+    font-size: 34px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover img {
+    filter: brightness(0.65);
+    transform: scale(1.02);
+}
+
+/* =========================================================
+   SHARED PROJECT DETAIL PAGE STYLES
+========================================================= */
+.project-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 80px;
+}
+
+.project-row {
+    margin-bottom: 54px;
+}
+
+.project-row-top {
+    margin-top: 10px;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.project-media img,
+.project-media video {
+    width: 100%;
+    display: block;
+    box-shadow: var(--shadow-soft);
+    background: white;
+}
+
+.project-text h2 {
+    margin: 0 0 16px 0;
+    font-size: 30px;
+}
+
+.project-text p {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.project-media-smaller {
+    width: 88%;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   CUBESAT PAGE
+========================================================= */
+.square-crop-image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.single-image-with-text-below {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.centered-text-block {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hover-video {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #0f607d;
+    cursor: pointer;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+}
+
+.video-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: white;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* =========================================================
+   AIRFOIL PAGE
+========================================================= */
+.airfoil-cover-crop {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* CAD layout with text under top view and left of isometric */
+.airfoil-cad-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+}
+
+.airfoil-cad-left,
+.airfoil-cad-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.airfoil-cad-text {
+    max-width: 100%;
+}
+
+/* Slightly reduce assembly image size */
+.airfoil-assembly-smaller {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   VERY IMPORTANT: HOW TO ADD ANOTHER PROJECT PAGE
+========================================================= */
+/*
+1. In projects.html:
+   - Copy the "NEW PROJECT TEMPLATE" card block
+   - Update href, image path, alt text, and title
+
+2. Create a new html file:
+   - Copy cubesat.html or airfoil.html
+   - Rename the file (example: rocket.html)
+   - Keep the top banner and footer
+   - Replace the content rows with your new images and text
+
+3. In CSS:
+   - If the new project uses the same layout, you do not need to add much
+   - Only add a new section here if the page needs custom image sizing or layout
+
+4. If you want more than 3 project cards per row on desktop:
+   - Change .projects-grid grid-template-columns
+*/
+
+/* =========================================================
+   RESPONSIVE STYLES
+========================================================= */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        min-height: auto;
+        padding-top: 35px;
+    }
+
+    .left-column {
+        flex-direction: column-reverse;
+    }
+
+    .button-container {
+        align-items: center;
+    }
+
+    .bio {
+        max-width: 700px;
+        min-height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .bio h1 {
+        font-size: 38px;
+    }
+
+    .bio p {
+        font-size: 18px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-coursework {
+        margin-left: 60px;
+        margin-right: 30px;
+    }
+
+    .skills-coursework h2 {
+        font-size: 46px;
+    }
+
+    .skills-coursework li {
+        font-size: 20px;
+    }
+
+    .two-column,
+    .airfoil-cad-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    :root {
+        --banner-height: 125px;
+    }
+
+    .top-banner-inner {
+        padding: 12px 16px 0 16px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-dot {
+        width: 24px;
+        height: 24px;
+        margin-top: 10px;
+    }
+
+    .home-text,
+    .back-projects-text {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 60px;
+    }
+
+    .profile-pic {
+        width: 280px;
+        height: 280px;
+    }
+
+    .main-button {
+        width: 165px;
+        font-size: 18px;
+    }
+
+    .bio h1 {
+        font-size: 32px;
+    }
+
+    .bio p {
+        font-size: 17px;
+    }
+
+    .projects-page {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .projects-header h1 {
+        font-size: 38px;
+    }
+
+    .projects-header p {
+        font-size: 18px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .project-overlay h2 {
+        font-size: 26px;
+    }
+
+    .project-page {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-text h2 {
+        font-size: 24px;
+    }
+
+    .project-text p {
+        font-size: 17px;
+    }
+
+    .skills-coursework {
+        margin: 30px 20px 50px 20px;
+    }
+
+    .skills-coursework h2 {
+        font-size: 38px;
+        margin-bottom: 28px;
+    }
+
+    .skills-coursework h3 {
+        font-size: 28px;
+    }
+
+    .skills-coursework h4 {
+        font-size: 18px;
+    }
+
+    .skills-coursework li,
+    .gpa-line {
+        font-size: 18px;
+    }
+
+    .footer-link {
+        font-size: 22px;
+    }
+}

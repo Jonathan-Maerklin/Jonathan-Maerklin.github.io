@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan's Portfolio | Airfoil Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       GLOBAL FIXED TOP BANNER
+  ========================================================== -->
+  <header class="top-banner">
+    <div class="top-banner-inner">
+      <a href="index.html" class="home-link" aria-label="Go to home page">
+        <span class="nav-dot"></span>
+        <span class="home-text">
+          <span>Jonathan's</span>
+          <span>Portfolio</span>
+        </span>
+      </a>
+
+      <a href="projects.html" class="back-projects-link" aria-label="Go back to projects page">
+        <span class="nav-dot"></span>
+        <span class="back-projects-text">Back to Projects</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT PAGE CONTENT
+       NOTE:
+       The introductory text block above picture 1 was removed
+       per your request.
+  ========================================================== -->
+  <main class="project-page">
+
+    <!-- Row 1 -->
+    <section class="project-row two-column project-row-top">
+      <div class="project-media">
+        <!-- Cropped top and bottom slightly -->
+        <img src="images/airfoil/airfoil_cover.jpg" alt="Airfoil project cover image" class="airfoil-cover-crop">
+      </div>
+
+      <div class="project-text">
+        <h2>Airfoil Project</h2>
+        <p>
+          In my Fluiddynamics course I had the opportunity to design and manufacture a NACA 2412 airfoil.
+          The goal of this project was characterizing lift and drag forces at different angles of attack 
+          within a 12" x 12" wind tunel at speeds of up to 60 mph.
+        </p>
+        <p>The test setup features a total of 16 pressure taps, each of which are connected to a manometer.
+        </p>
+        <p>The CAD was created using SolidWorks, the middle section was 3D printed using resin (formlabs) 
+          and the outer two sections were 3D printed using PLA (Bambo Lab).</p>
+      </div>
+    </section>
+
+    <!-- CAD row -->
+    <section class="project-row airfoil-cad-section">
+      <div class="airfoil-cad-left">
+        <div class="project-media">
+          <img src="images/airfoil/airfoil_top_view.png" alt="Airfoil top view">
+        </div>
+
+        <!-- Moved underneath top view and left of isometric view -->
+        <div class="project-text airfoil-cad-text">
+          <h2>CAD Development</h2>
+          <p>
+            The middle airfoil features a total of 16 pressure taps. They are spread across the upper and lower surface and the leading, and trailing edge.
+          </p>
+          <p>Resin  was used to manufacture this section to achieve adequate tolerancing along the inner channels, as well as a smooth surface finish.
+            This is important, because the geometrical accuracy of the channels, 
+            and the surface roughness of the airfoil will affect the accuracy of the results.
+          </p>
+        </div>
+      </div>
+
+      <div class="airfoil-cad-right">
+        <div class="project-media">
+          <img src="images/airfoil/airfoil_side_view.png" alt="Airfoil side view">
+        </div>
+
+        <div class="project-media">
+          <img src="images/airfoil/airfoil_isometric_view.png" alt="Airfoil isometric view">
+        </div>
+      </div>
+    </section>
+
+    <!-- Data table -->
+    <section class="project-row two-column">
+      <div class="project-media">
+        <img src="images/airfoil/airfoil_data_table.png" alt="Airfoil data table">
+      </div>
+
+      <div class="project-text">
+        <h2>Measured Data</h2>
+        <p>
+          This graph shows theoretical lift and drag forces [N] at different angles of attack
+          for a 4" x 4" cross-section at wind speeds of 60 mph.
+        </p>
+      </div>
+    </section>
+
+    <!-- Data graph -->
+    <section class="project-row two-column">
+      <div class="project-text">
+        <h2>Data Trends</h2>
+      </div>
+
+      <div class="project-media">
+        <img src="images/airfoil/airfoil_data_graph.png" alt="Airfoil data graph">
+      </div>
+    </section>
+
+    <!-- Final assembly -->
+    <section class="project-row two-column">
+      <div class="project-media project-media-smaller">
+        <img src="images/airfoil/airfoil_assembly.jpg" alt="Airfoil final assembly image">
+      </div>
+
+      <div class="project-text">
+        <h2>Final Assembly</h2>
+        <p>
+          This image shows the full 4" x 12" airfoil, including the mounting plate for attachment to the wind tunnel. 
+          Since the pressure taps are only located on the middle section, the influence of the outer two sections on the esperimental results are negligible.
+          Therefore, to reduce material costs, the two outer sections were fabricated using PLA. 
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <div class="footer-left">
+      <h3>Follow me on</h3>
+      <a href="https://www.linkedin.com/in/max-jonathan-maerklin" target="_blank" class="footer-link">
+        <span class="footer-dot"></span>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       HOW TO MAKE A NEW PROJECT PAGE LATER
+       1. Copy this entire file
+       2. Rename it (example: new-project.html)
+       3. Keep the same top banner and footer
+       4. Replace each image / heading / text section
+       5. Add the new page into projects.html
+  ========================================================== -->
+
+</body>
+</html>

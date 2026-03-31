@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan's Portfolio | CubeSat Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       GLOBAL FIXED TOP BANNER
+  ========================================================== -->
+  <header class="top-banner">
+    <div class="top-banner-inner">
+      <a href="index.html" class="home-link" aria-label="Go to home page">
+        <span class="nav-dot"></span>
+        <span class="home-text">
+          <span>Jonathan's</span>
+          <span>Portfolio</span>
+        </span>
+      </a>
+
+      <a href="projects.html" class="back-projects-link" aria-label="Go back to projects page">
+        <span class="nav-dot"></span>
+        <span class="back-projects-text">Back to Projects</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT PAGE CONTENT
+       NOTE:
+       The introductory text block above picture 1 was removed
+       per your request.
+  ========================================================== -->
+  <main class="project-page">
+
+    <!-- Row 1 -->
+    <section class="project-row two-column project-row-top">
+      <div class="project-media">
+        <!-- Square crop requested -->
+        <img src="images/cubesat/cubesat_cover.jpg" alt="CubeSat project cover image" class="square-crop-image">
+      </div>
+
+      <div class="project-text">
+        <h2>CUSLI CubeSat</h2>
+        <p>
+          The InkSat, CUSLI's current project, aims to explore the effectiveness of e-paper as a thermal controller for small satellites in space.
+          E-paper is an electronic display. Commonly found in E-readers, it consists of a film filled with charged ink particles in a clear fluid. 
+          When a charge is applied, the ink particles repel or attract from the surface of the film accordingly. 
+          Once the state of the particles has changed and a pattern is shown on the screen, the e-paper it draws nearly zero current.
+        </p>
+        <p>My role in this project lies in the integration of an IMU sensor into the Attitude Determination System, 
+          where we work on determining the satellites' orientation in space, 
+          as well as constructing a V2 prototype of the satellite to enable rotational testing. 
+        </p>
+        <p>The electronics are controlled using a Raspberry Pi 4B, communication using I2C, and the prototype was laser-cut from acrylic.
+        </p>
+      </div>
+    </section>
+
+    <!-- Row 2 -->
+    <section class="project-row two-column">
+      <div class="project-text">
+        <h2>I2C Communication Testing</h2>
+        <p>
+          The IMU implementation began with testing the IMU for responsiveness. Here you can see the I2C bus visible on the oscilloscope.
+        </p>
+        <p>A response would mean that the last pink bit is pulled low by the IMU, which is known as an acknowledgment (ACK). 
+          As seen in this image, this is not the case, indicating an error.
+        </p>
+        <p>(Yellow = clk, pink = data)</p>
+      </div>
+
+      <div class="project-media">
+        <img src="images/cubesat/Oszilloscope_I2C.jpg" alt="Oscilloscope display showing I2C communication">
+      </div>
+    </section>
+
+    <!-- Row 3 -->
+    <section class="project-row single-image-with-text-below">
+      <div class="project-media wide-media">
+        <img src="images/cubesat/TinkerCAD.png" alt="TinkerCAD electronics layout">
+      </div>
+
+      <div class="project-text centered-text-block">
+        <h2>Electronics Layout</h2>
+        <p>
+          Before constructing the structure of the V2 CubeSat, the electronic circuitry had to be redesigned to fit the true-to-size space constraints of a 10 x 10 x 10 cm CubeSat (1U).
+        </p>
+      </div>
+    </section>
+
+    <!-- Row 4 -->
+    <section class="project-row two-column">
+      <div class="project-text">
+        <h2>Mechanical Design</h2>
+        <p>
+          The V2 design of the CubeSat began with the idea of autonomous rotational testing. 
+          This meant including an on-board battery to supply the system with power, allowing for wireless testing.
+        </p>
+      </div>
+
+      <div class="project-media">
+        <img src="images/cubesat/CubeSat_CAD.jpg" alt="CubeSat CAD model">
+      </div>
+    </section>
+
+    <!-- Row 5 -->
+    <section class="project-row two-column">
+      <div class="project-media project-media-smaller">
+        <img src="images/cubesat/Circut_Images.jpg" alt="CubeSat circuit hardware setup">
+      </div>
+
+      <div class="project-text">
+        <h2>Hardware Integration</h2>
+        <p>
+          A picture of the redesigned circuit.
+        </p>
+      </div>
+    </section>
+
+    <!-- Row 6 -->
+    <section class="project-row two-column">
+      <div class="project-text">
+        <h2>Rotation Demo</h2>
+        <p>
+          Here you can see me testing the stepper motor and shaft coupling 
+          before fully assembling the V2 CubeSat. See the top image for the full assembly.
+        </p>
+      </div>
+
+      <div class="video-container">
+        <video
+          class="hover-video"
+          muted
+          loop
+          playsinline
+          preload="auto"
+      >
+          <source src="movies/CubeSat_Rotation.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <span class="video-label">Video</span>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer-banner">
+    <div class="footer-left">
+      <h3>Follow me on</h3>
+      <a href="https://www.linkedin.com/in/max-jonathan-maerklin" target="_blank" class="footer-link">
+        <span class="footer-dot"></span>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const hoverVideo = document.querySelector('.hover-video');
+
+    if (hoverVideo) {
+      hoverVideo.addEventListener('mouseenter', () => {
+        hoverVideo.play();
+      });
+
+      hoverVideo.addEventListener('mouseleave', () => {
+        hoverVideo.pause();
+        hoverVideo.currentTime = 0;
+      });
+    }
+  </script>
+
+  <!-- =========================================================
+       HOW TO MAKE A NEW PROJECT PAGE LATER
+       1. Copy this entire file
+       2. Rename it (example: new-project.html)
+       3. Keep the same top banner and footer
+       4. Replace each image / heading / text section
+       5. Add the new page into projects.html
+  ========================================================== -->
+
+</body>
+</html>
